@@ -21,5 +21,8 @@
     <ClInclude Include="__vm\.Hexapod_Funke_0_1.vsarduino.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="__vm\.Hexapod-Funke.vsarduino.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

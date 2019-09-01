@@ -9,6 +9,7 @@
 
 #include <SdFat.h>
 
+
 #define OLED_RESET			4 // not used / nicht genutzt bei diesem Display
 
 #define DRAW_DELAY			118
@@ -90,7 +91,7 @@ const int8_t DISABLE_CHIP_SELECT = -1;
 // Test with reduced SPI speed for breadboards.
 // Change spiSpeed to SPI_FULL_SPEED for better performance
 // Use SPI_QUARTER_SPEED for even slower SPI bus speed
-const uint8_t spiSpeed = SPI_HALF_SPEED;
+/*const uint8_t spiSpeed = SPI_HALF_SPEED;*/
 
 // File system object.
 SdFat sd;
@@ -216,7 +217,7 @@ void setup()
 
 	// ################# SD #########################
 	
-		if (!sd.begin(chipSelect, spiSpeed)) {
+	/*	if (!sd.begin(chipSelect, spiSpeed)) {
 			if (sd.card()->errorCode()) {
 				for (int i = 0; i < 255; i++) {
 					analogWrite(VIBRATOR, i);
@@ -243,7 +244,7 @@ void setup()
 		if (size == 0) {
 			cout << F("Can't determine the card size.\n");
 		}
-
+		*/
 	// ################# SD ende ####################
 
 		volt = (analogRead(A15)) * (5.00 / 1023.00) * 2;
